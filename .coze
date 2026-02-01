@@ -1,0 +1,12 @@
+[project]
+requires = ["nodejs-24"]
+
+[dev]
+build = ["bash", "./scripts/prepare.sh"]
+run = ["bash", "./scripts/dev.sh"]
+deps = ["git", "ffmpeg"] # -> apt install git ffmpeg
+
+[deploy]
+build = ["bash","./scripts/build.sh"]
+run = ["bash","./scripts/start.sh"]
+deps = ["git", "ffmpeg"] # -> apt install git ffmpeg
